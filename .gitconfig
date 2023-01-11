@@ -1,0 +1,18 @@
+[user]
+	name = Sander Beekhuis
+	
+[init]
+	defaultBranch = main
+
+[alias]
+	s = status
+	c = commit
+	graph = log --oneline --graph --all
+	pushup = push --set-upstream origin HEAD
+    	l=log --oneline --max-count=15
+	
+[pull]
+	ff = only
+	
+[commit]
+	verbose = true
