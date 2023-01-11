@@ -1,0 +1,98 @@
+# Version of powerlevel10k that has been tuned by myself
+
+#:schema https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+
+version = 2.0
+
+[[blocks]]
+  alignment = "left"
+  type = "prompt"
+
+  [[blocks.segments]]
+    Enabled = false
+    background = "#ffffff"
+    foreground = "#000000"
+    leading_diamond = "\ue0b6"
+    style = "diamond"
+    template = " {{ if .WSL }}WSL at {{ end }}{{.Icon}} "
+    trailing_diamond = "\ue0b4"
+    type = "os"
+
+  [[blocks.segments]]
+    Enabled = false
+    background = "#0000ff"
+    foreground = "#ffffff"
+    powerline_symbol = "\ue0b4"
+    style = "powerline"
+    template = " {{ .Path }} "
+    type = "path"
+    [blocks.segments.properties]
+      style = "full"
+
+  [[blocks.segments]]
+    Enabled = false
+    background = "#0077c2"
+    foreground = "#ffffff"
+    powerline_symbol = "\ue0b4"
+    style = "powerline"
+    template = " {{ .Status }} "
+    type = "poshgit"
+
+[[blocks]]
+  alignment = "right"
+  type = "prompt"
+
+  [[blocks.segments]]
+    Enabled = false
+    background = "#D4E157"
+    foreground = "#000000"
+    leading_diamond = "\ue0b6"
+    style = "diamond"
+    template = " {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} <#000000>\ue0b6</>"
+    type = "python"
+    [blocks.segments.properties]
+      display_mode = "environment"
+      fetch_version = false
+
+  [[blocks.segments]]
+    Enabled = false
+    background = "#ffffff"
+    foreground = "#000000"
+    leading_diamond = "\ue0b6"
+    style = "diamond"
+    template = " {{ .CurrentDate | date .Format }} "
+    trailing_diamond = "\ue0b4"
+    type = "time"
+    [blocks.segments.properties]
+      time_format = "15:04:05"
+
+  [[blocks.segments]]
+    Enabled = false
+    background = "#777777"
+    foreground = "#000000"
+    leading_diamond = "\ue0b6"
+    style = "diamond"
+    template = " {{ .FormattedMs }} "
+    trailing_diamond = "\ue0b4"
+    type = "executiontime"
+    [blocks.segments.properties]
+      style = "round"
+
+[[blocks]]
+  alignment = "left"
+  newline = true
+  type = "prompt"
+
+  [[blocks.segments]]
+    Enabled = false
+    foreground = "#D4E157"
+    foreground_templates = ["{{ if gt .Code 0 }}#FF5252{{ end }}"]
+    style = "plain"
+    template = "\u276f{{ if gt .Code 0 }}\uf00d{{ else }}\uf42e{{ end }} "
+    type = "exit"
+    [blocks.segments.properties]
+      always_enabled = true
+
+[transient_prompt]
+  Enabled = false
+
