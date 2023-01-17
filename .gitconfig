@@ -1,6 +1,11 @@
+### Machine-Specific
+
 [user]
 	name = Sander Beekhuis
-	
+	email = sander.beekhuis@example.com
+
+### General
+
 [init]
 	defaultBranch = main
 
@@ -8,11 +13,13 @@
 	s = status
 	c = commit
 	graph = log --oneline --graph --all
-	pushup = push --set-upstream origin HEAD
-    	l=log --oneline --max-count=15
-	
+	l=log --oneline --max-count=15
+
 [pull]
 	ff = only
-	
+
 [commit]
 	verbose = true
+
+[push]
+	default = current
