@@ -3,6 +3,7 @@
 
 # Aliases
 Set-Alias which Get-Command
+Set-Alias touch New-Item
 
 
 # Prompt config
