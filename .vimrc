@@ -4,3 +4,4 @@ set autoindent
 set showmatch
 set showmode
 
+syntax on
