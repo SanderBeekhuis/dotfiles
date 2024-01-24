@@ -2,7 +2,7 @@
 
 [user]
 	name = Sander Beekhuis
-	email = sander.beekhuis@example.com
+	email = 16463246+SanderBeekhuis@users.noreply.github.com
 
 ### General
 
@@ -14,6 +14,8 @@
 	c = commit
 	graph = log --oneline --graph --all
 	l=log --oneline --max-count=15
+	stpull=!git stash && git pull && git stash pop
+
 
 [pull]
 	ff = only
@@ -23,3 +25,7 @@
 
 [push]
 	default = current
+
+[pager]
+	log = false # Do not use pager for git log, but display in main terminal
+
