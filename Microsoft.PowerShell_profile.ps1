@@ -2,11 +2,11 @@
 # $env:Path += ";C:\Users\BeekhuisSJ\AppData\Roaming\Python\Scripts"
 
 # Aliases
-Set-Alias which Get-Command
-Set-Alias touch New-Item
+New-Alias which Get-Command
+New-Alias touch New-Item
+New-Alias dc docker-compose
 
 
-# Prompt config
+# Prompt config for Oh-My-Posh
 Import-Module posh-git  # git completion
-$env:POSH_GIT_ENABLED = $true
 oh-my-posh init pwsh --config ~\Documents\WindowsPowerShell\powerlevel10k_sb.omp.toml | Invoke-Expression
