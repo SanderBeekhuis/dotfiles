@@ -24,7 +24,8 @@
 	verbose = true
 
 [push]
-	default = current
+	default = current # Only push the current branch to update a branch with the same name.
+	autoSetupRemote = true # git push will automatically setup the remote branch.
 
 [pager]
 	log = false # Do not use pager for git log, but display in main terminal
